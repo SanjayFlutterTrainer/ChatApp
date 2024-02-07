@@ -17,6 +17,7 @@ class _ChatScreenState extends State<ChatScreen> {
   String userName = '';
   List result = [];
   bool isSend = false;
+  bool fake = true;
   addUser({required String name, required String message}) {
     data
         .add({'name': name, 'message': message, 'createdAt': DateTime.now()})
