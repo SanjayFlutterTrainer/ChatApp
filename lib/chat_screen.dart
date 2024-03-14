@@ -196,26 +196,16 @@ class _ChatScreenState extends State<ChatScreen> {
                               borderRadius: BorderRadius.circular(30))),
                     ),
                   ),
-                  isSend
-                      ? IconButton(
-                          onPressed: () {
-                            addUser(
-                                name: userName, message: chatController.text);
+                  IconButton(
+                      onPressed: () {
+                        addUser(name: userName, message: chatController.text);
 
-                            chatController.clear();
-                            scroll.animateTo(scroll.position.minScrollExtent,
-                                duration: const Duration(milliseconds: 10),
-                                curve: Curves.easeOut);
-                          },
-                          icon: const Icon(Icons.send_rounded))
-                      : IconButton(
-                          onPressed: () {
-                            chatController.clear();
-                            scroll.animateTo(scroll.position.minScrollExtent,
-                                duration: const Duration(milliseconds: 10),
-                                curve: Curves.easeOut);
-                          },
-                          icon: const Icon(Icons.mic))
+                        chatController.clear();
+                        scroll.animateTo(scroll.position.minScrollExtent,
+                            duration: const Duration(milliseconds: 10),
+                            curve: Curves.easeOut);
+                      },
+                      icon: const Icon(Icons.send_rounded))
                 ],
               ),
             ),
